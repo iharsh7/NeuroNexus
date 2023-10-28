@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import { useState } from 'react';
+import { Navigate } from "react-router-dom";
+import { Routes } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import Home from './components/Home';
+import Play from './components/Play';
+import Celebrate from './components/Celebrate';
+const App = ()=> {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  
+  <Routes>
+  <Route path='/' element={<Home/>}/>
+  <Route path='/play' element={<Play/>}/>
+  <Route path='/celebrate' element={<Celebrate/>}/>
+
+</Routes> 
+
   );
 }
 
